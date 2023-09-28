@@ -1,0 +1,7 @@
+reload("user.cmp")
+reload("user.colorscheme")
+reload("user.keymaps")
+reload("user.kind")
+reload("user.options")
+reload("user.plugins")
+reload("user.which-key")
