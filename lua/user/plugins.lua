@@ -19,6 +19,7 @@ lvim.plugins = {
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-cmdline" },
   { "saadparwaiz1/cmp_luasnip" },
+  { "github/copilot.vim" },
 
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
@@ -55,12 +56,24 @@ lvim.plugins = {
   },
 }
 
--- table.insert(lvim.plugins, {
---   "zbirenbaum/copilot-cmp",
---   event = "InsertEnter",
---   dependencies = { "zbirenbaum/copilot.lua" },
---   config = function()
---     local ok, cmp = pcall(require, "copilot_cmp")
---     if ok then cmp.setup({}) end
---   end,
--- })
+table.insert(lvim.plugins, {
+    "zbirenbaum/copilot-cmp",
+    event = "InsertEnter",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    config = function()
+      local ok, cmp = pcall(require, "copilot_cmp")
+      if ok then cmp.setup({}) end
+    end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  }
+)

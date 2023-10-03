@@ -1,5 +1,6 @@
-reload("user.cmp")
+-- reload("user.cmp")
 reload("user.colorscheme")
+reload("user.copilot")
 reload("user.keymaps")
 reload("user.kind")
 reload("user.options")
