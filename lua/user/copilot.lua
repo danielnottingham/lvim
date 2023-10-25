@@ -1,5 +1,10 @@
 local cmp = require "cmp"
-vim.g.copilot_filetypes = { xml = false }
+vim.g.copilot_filetypes = {
+  -- xml = false,
+  react = true,
+  vue = true,
+  markdown = true
+}
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""

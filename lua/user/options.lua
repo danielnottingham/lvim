@@ -50,6 +50,7 @@ lvim.builtin.telescope = {
 
 -- vim.opt.timeoutlen = 500
 vim.opt.colorcolumn = '120'
+vim.opt.relativenumber = true
 
 -- Nvim treesitter-endwise config
 require('nvim-treesitter.configs').setup {
@@ -75,6 +76,6 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
     command = "rubocop",
-    filetypes = { "ruby" },
-  },
+    filetypes = { "ruby" }
+  }
 }
