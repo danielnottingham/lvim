@@ -1,6 +1,7 @@
 lvim.plugins = {
   -- colorschemes
   { "tomasr/molokai" },
+  { "projekt0n/github-nvim-theme" },
 
   { "airblade/vim-gitgutter" },
   { "vim-test/vim-test" },
@@ -23,6 +24,7 @@ lvim.plugins = {
 
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
+
   -- todo-comments is a lua plugin for Neovim >= 0.8.0 to highlight and search for todo comments like TODO, HACK, BUG in your code base.
   {
     "folke/todo-comments.nvim",
@@ -54,9 +56,10 @@ lvim.plugins = {
       end)
     end,
   },
+
 }
 
-
+-- Add copilot-cmp and copilot.lua
 table.insert(lvim.plugins, {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",

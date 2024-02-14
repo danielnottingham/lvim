@@ -5,6 +5,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+-- lvim.transparent_window = true
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
@@ -50,7 +51,7 @@ lvim.builtin.telescope = {
 
 -- vim.opt.timeoutlen = 500
 vim.opt.colorcolumn = '120'
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- Nvim treesitter-endwise config
 require('nvim-treesitter.configs').setup {

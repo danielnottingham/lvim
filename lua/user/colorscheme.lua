@@ -1,6 +1,6 @@
 local themes = {
-  molokai = "molokai"
+  molokai = "molokai",
+  github_light = "github_light"
 }
 
-lvim.colorscheme = themes.molokai
-lvim.transparent_window = false
+lvim.colorscheme = themes.github_light
